@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "3619E742-91F3-434A-B235-A1D35E1128A0"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F5F9A166-CC0C-475E-A0F0-09D3B82F9471"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MachO-Kit/MachOKit/Fat/MKFatBinary.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "-initWithMemoryMap:error:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "91E213DB-2A12-491B-AFA5-4F5DDF3C229E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "P/Parser/Document.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "read(from:ofType:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "91E213DB-2A12-491B-AFA5-4F5DDF3C229E - a8210c9c6ded10b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Parser.MachODocument.read(from: Foundation.URL, ofType: Swift.String) throws -&gt; ()"
+                  moduleName = "Parser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/19908702/Desktop/Parser/P/Parser/Document.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "1320">
+               </Location>
+               <Location
+                  uuid = "91E213DB-2A12-491B-AFA5-4F5DDF3C229E - c6386840938a384e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Parser.Document.read(from: Foundation.URL, ofType: Swift.String) throws -&gt; ()"
+                  moduleName = "Parser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/19908702/Desktop/Parser/P/Parser/Document.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "1320">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3EEEA1A8-9903-4694-A4C8-06E35F9340E4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "P/Parser/Document.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "read(from:ofType:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3EEEA1A8-9903-4694-A4C8-06E35F9340E4 - a8210c9c6ded1106"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Parser.MachODocument.read(from: Foundation.URL, ofType: Swift.String) throws -&gt; ()"
+                  moduleName = "Parser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/19908702/Desktop/Parser/P/Parser/Document.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "1711">
+               </Location>
+               <Location
+                  uuid = "3EEEA1A8-9903-4694-A4C8-06E35F9340E4 - c6386840938a39fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Parser.Document.read(from: Foundation.URL, ofType: Swift.String) throws -&gt; ()"
+                  moduleName = "Parser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/19908702/Desktop/Parser/P/Parser/Document.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "1711">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "28AAA78E-DF7F-4D0D-A928-70E6657806E1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "P/Parser/Document.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "read(from:ofType:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "28AAA78E-DF7F-4D0D-A928-70E6657806E1 - a8210c9c6ded1f37"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Parser.MachODocument.read(from: Foundation.URL, ofType: Swift.String) throws -&gt; ()"
+                  moduleName = "Parser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/19908702/Desktop/Parser/P/Parser/Document.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "462">
+               </Location>
+               <Location
+                  uuid = "28AAA78E-DF7F-4D0D-A928-70E6657806E1 - c6386840938a37ca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Parser.Document.read(from: Foundation.URL, ofType: Swift.String) throws -&gt; ()"
+                  moduleName = "Parser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/19908702/Desktop/Parser/P/Parser/Document.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "462">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "56D1F3FA-389F-4496-9736-059E5334860C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "P/Parser/Document.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "read(from:ofType:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "56D1F3FA-389F-4496-9736-059E5334860C - a8210c9c6ded119a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Parser.MachODocument.read(from: Foundation.URL, ofType: Swift.String) throws -&gt; ()"
+                  moduleName = "Parser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/19908702/Desktop/Parser/P/Parser/Document.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "654">
+               </Location>
+               <Location
+                  uuid = "56D1F3FA-389F-4496-9736-059E5334860C - c6386840938a3967"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Parser.Document.read(from: Foundation.URL, ofType: Swift.String) throws -&gt; ()"
+                  moduleName = "Parser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/19908702/Desktop/Parser/P/Parser/Document.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "654">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2127036A-2452-43F8-9A6E-23F39C503A77"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "P/Parser/Document.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "read(from:ofType:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2127036A-2452-43F8-9A6E-23F39C503A77 - a8210c9c6ded12a3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Parser.MachODocument.read(from: Foundation.URL, ofType: Swift.String) throws -&gt; ()"
+                  moduleName = "Parser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/19908702/Desktop/Parser/P/Parser/Document.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "741">
+               </Location>
+               <Location
+                  uuid = "2127036A-2452-43F8-9A6E-23F39C503A77 - c6386840938a3a5e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Parser.Document.read(from: Foundation.URL, ofType: Swift.String) throws -&gt; ()"
+                  moduleName = "Parser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/19908702/Desktop/Parser/P/Parser/Document.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "741">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
