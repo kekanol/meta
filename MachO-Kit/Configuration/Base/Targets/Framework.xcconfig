@@ -1,0 +1,19 @@
+//
+// This file defines additional configuration options that are appropriate only
+// for a framework. Typically, you want to use a platform-specific variant
+// instead.
+//
+
+// Inherit from Dynamic Library
+#include "DynamicLibrary.xcconfig"
+
+//---------------------------------------------------------------------------//
+// ### PACKAGING ############################################################
+//---------------------------------------------------------------------------//
+
+// Whether this framework should define an LLVM module
+DEFINES_MODULE = YES
+
+// Default frameworks to the name of the project, instead of any
+// platform-specific target
+PRODUCT_NAME = $(TARGET_NAME:c99extidentifier)
