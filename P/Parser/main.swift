@@ -12,10 +12,9 @@ let needed = args.dropFirst(args.count - 2)
 print(needed)
 guard needed.count == 2 else { exit(1) }
 let fm = FileManager.default
-var metaData: ([String: Set<String>], [String: Set<String>]) = ([:], [:])
-let metaList = ["cstring"]
+var metaData: (Set<String>, Set<String>) = ([], [])
 
-func createMeta(for path: String) -> [String: Set<String>] {
+func createMeta(for path: String) -> Set<String> {
 	let url = URL(fileURLWithPath: path)
 	let macho: MKMachOImage?
 	do {
@@ -29,34 +28,22 @@ func createMeta(for path: String) -> [String: Set<String>] {
 		print("Ne vishlo")
 		exit(1)
 	}
-	let sections = macho.sections
-//	let commands = macho.loadCommands
-	var result: [String: Set<String>] = [:]
+	let loadCommands = macho.loadCommands
+	var result: Set<String> = []
 
-	metaList.forEach { key in
-		var data: Set<String> = []
-		for (_, section) in sections {
-			switch section.type {
-			case .cStringLiterals:
-				if let cstrings = section as? MKCStringSection {
-					cstrings.strings.forEach { data.insert($0.string ?? "") }
-				}
-			default: continue
-//				print(section.type, section.name)
-			}
+	for dylib in loadCommands where dylib.cmd == 12 { // 12 - значение LC_LOAD_DYLIB
+		if let loadDylib = dylib as? MKLCLoadDylib {
+			result.insert(loadDylib.name.description)
 		}
-		result[key] = data
 	}
 	return result
 }
 
 func compare(lhs: Set<String>, rhs: Set<String>) -> Double {
-	lhs.intersection(rhs).count
-	
 	return Double(lhs.intersection(rhs).count) / Double([lhs.count, rhs.count].max()!)
 }
 
-for (index, path) in args.enumerated() {
+for (index, path) in needed.enumerated() {
 	var isDir: ObjCBool = false
 	guard fm.fileExists(atPath: path, isDirectory: &isDir) else {
 		print("Директория \(path) не найдена")
@@ -72,12 +59,5 @@ for (index, path) in args.enumerated() {
 
 print(metaData.0)
 
-for key in metaList {
-	guard let lhs = metaData.0[key],
-		  let rhs = metaData.1[key] else {
-		print("metadata in section \(key) missing")
-		continue
-	}
-	let equality = compare(lhs: lhs, rhs: rhs)
-	print("for \(key) similarity equal \(equality)")
-}
+let equality = ((compare(lhs: metaData.0, rhs: metaData.1) * 100) * 100).rounded() / 100
+print("similarity equal \(equality) %")
