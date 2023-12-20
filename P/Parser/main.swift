@@ -50,13 +50,18 @@ func createMeta(for path: String) -> ([String: Set<String>], [String: String]) {
 	}
 
 	var dylibs: Set<String> = []
-	for dylib in loadCommands where dylib.cmd == 12 { // 12 - значение LC_LOAD_DYLIB
-		if let loadDylib = dylib as? MKLCLoadDylib {
+	var cmdSizes: Set<String> = []
+	for cmd in loadCommands {
+		if cmd.cmd == 12, // 12 - значение LC_LOAD_DYLIB
+		   let loadDylib = cmd as? MKLCLoadDylib {
 			dylibs.insert(loadDylib.name.description)
 		}
+		cmdSizes.insert("\(cmd.cmdSize)")
 	}
 	metaList.insert("dylib")
+	metaList.insert("cmdSizes")
 	result["dylib"] = dylibs
+	result["cmdSizes"] = cmdSizes
 	return (result, sizes)
 }
 
