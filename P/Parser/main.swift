@@ -22,7 +22,7 @@ func createMeta(for path: String) -> ([String: Set<String>], [String: String]) {
 		let document = try Document(contentsOf: url, ofType: "")
 		macho = document.rootNode.macho
 	} catch {
-		print("Ne vishlo")
+		print("Pizda")
 		exit(1)
 	}
 	guard let macho else {
@@ -30,6 +30,7 @@ func createMeta(for path: String) -> ([String: Set<String>], [String: String]) {
 		exit(1)
 	}
 	let sections = macho.sections
+	let loadCommands = macho.loadCommands
 	sections.forEach { metaList.insert($0.value.name ?? "") }
 	var result: [String: Set<String>] = [:]
 	var sizes: [String: String] = [:]
@@ -39,9 +40,6 @@ func createMeta(for path: String) -> ([String: Set<String>], [String: String]) {
 		if let cstrings = section as? MKCStringSection {
 			cstrings.strings.forEach { data.insert($0.string ?? "") }
 			result[key] = data
-		} else if let ustrings = section as? MKUStringSection {
-			ustrings.strings.forEach { data.insert($0.string ?? "")}
-			result[key] = data
 		} else if let datas = section as? MKDataSection {
 			sizes[key] =  "\(datas.size)"
 		} else if let pointers = section as? MKPointerListSection<AnyObject> {
@@ -50,6 +48,15 @@ func createMeta(for path: String) -> ([String: Set<String>], [String: String]) {
 			sizes[key] = "\(image.size)"
 		}
 	}
+
+	var dylibs: Set<String> = []
+	for dylib in loadCommands where dylib.cmd == 12 { // 12 - значение LC_LOAD_DYLIB
+		if let loadDylib = dylib as? MKLCLoadDylib {
+			dylibs.insert(loadDylib.name.description)
+		}
+	}
+	metaList.insert("dylib")
+	result["dylib"] = dylibs
 	return (result, sizes)
 }
 
@@ -57,10 +64,6 @@ func compare(lhs: Set<String>, rhs: Set<String>) -> Double {
 	if lhs.count == 1, let L = Double(lhs.first!), rhs.count == 1, let R = Double(rhs.first!) {
 		return [L, R].min()! / [L, R].max()!
 	}
-//	print(lhs.count)
-//	print(rhs.count)
-//	print(lhs.intersection(rhs).count)
-//	print("------------------")
 
 	return Double(lhs.intersection(rhs).count) / Double([lhs.count, rhs.count].max()!)
 }
